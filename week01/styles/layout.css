@@ -20,12 +20,11 @@ body {
 header {
   grid-area: header;
   text-align: center;
-  height: 10vh;
   background-color: rgb(79, 78, 78);
   color: #fff;
 }
 nav {
-  grid-area: nav;
+  /* grid-area: nav; */
   background-color: black;
 }
 nav ul {
@@ -36,6 +35,10 @@ nav ul {
 }
 nav ul li {
   margin: 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
 main {
