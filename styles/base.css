@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  min-height: 100vh;
+  font-family: "Itim", sans-serif;
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+  background-color: rgb(79, 78, 78);
+  color: #fff;
+}
+
+nav {
+  background-color: black;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  color: black;
+  background-color: #fff;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  text-align: center;
+  gap: 10px;
+  padding: 0 2vw;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  border-radius: 16px;
+  border: solid black 2px;
+}
+
+.card:first-of-type {
+  text-align: center;
+}
+
+.card:last-of-type {
+  padding: 0 30px;
+  text-align: left;
+}
+
+.card h2 {
+  margin-bottom: 3vh;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3vw;
+  padding: 0 20px;
+}
+
+.information:last-of-type {
+  flex-direction: row-reverse;
+}
+
+.argentinaTitle {
+  margin: 5vh 0;
+  border-bottom: solid lightblue 2px;
+}
+
+.card img {
+  width: 10vw;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  height: 10vh;
+  background-color: rgb(79, 78, 78);
+  color: #fff;
+}
+
+@media (max-width: 796px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+
+  .card img {
+    width: 20vw;
+  }
+}
