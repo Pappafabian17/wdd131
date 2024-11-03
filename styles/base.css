@@ -82,12 +82,17 @@ main {
 }
 
 .card:last-of-type {
-  padding: 0 30px;
   text-align: left;
 }
 
 .card h2 {
   margin-bottom: 3vh;
+  text-align: center;
+  border-radius: 16px 16px 0 0;
+  background-color: rgb(142, 142, 237);
+}
+.card ul {
+  padding: 0 30px;
 }
 
 .information {
@@ -105,6 +110,7 @@ main {
 .argentinaTitle {
   margin: 5vh 0;
   border-bottom: solid lightblue 2px;
+  font-size: 1.8rem;
 }
 
 .card img {
