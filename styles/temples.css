@@ -56,12 +56,23 @@ nav ul li a:hover {
 .open ul {
   display: block;
 }
+body {
+  font-family: "Itim", sans-serif;
+}
+h1,
+h2 {
+  margin: 1rem;
+}
+main h2 {
+  text-align: center;
+}
 
 .templesGrid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.3rem;
   place-items: center;
+  margin-bottom: 2rem;
 }
 
 footer {
