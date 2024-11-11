@@ -1,0 +1,8 @@
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    height: 10vh;
+    background-color: rgb(79, 78, 78);
+    color: #fff;
+  }
