@@ -20,6 +20,32 @@ header {
   border-bottom: 1rem solid var(--principal-color);
   padding: 1rem;
 }
+.responsive-image {
+  width: 100vw;
+  height: auto;
+}
+.dataContainer {
+  color: var(--text-color);
+  max-width: 300px;
+  margin: 0 auto;
+}
+.dataContainer h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.informationList {
+  list-style: none;
+  padding: 0;
+}
+.informationList li {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.informationList li span {
+  font-weight: normal;
+  color: var(--secondary-text-color);
+}
 
 footer {
   grid-area: footer;

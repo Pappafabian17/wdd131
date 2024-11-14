@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -18,42 +18,66 @@
     />
     <script src="scripts/place.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Argentina</h1>
+      <h1>Argentina</h1>
     </header>
     <main>
       <div>
         <picture>
-          <source srcset="images/buenos-aires-large.webp" media="min-width: 1000px">
-          <source srcset="images/buenos-aires-medium.webp" media="min-width: 550px">
-          <img src="images/hero-small.webp" alt="Orem Utah Temple" width="400" height="200">
+          <source
+            srcset="images/buenos-aires-large.webp"
+            media="(min-width: 1000px)"
+          />
+          <source
+            srcset="images/buenos-aires.webp"
+            media="(min-width: 550px)"
+          />
+          <img
+            class="responsive-image"
+            src="images/buenos-aires-small.webp"
+            alt="Buenos Aires"
+            width="400"
+            height="200"
+          />
         </picture>
       </div>
-        <section>
-            <h2>Data</h2>
-            <ul>
-                <li>Area:<span></span></li>
-                <li>Population: <span></span></li>
-                <li>Capital: <span></span></li>
-                <li>Languajes: <span></span></li>
-                <li>Currency: <span></span></li>
-                <li>Time Zone: <span></span></li>
-                <li>Calling Code: <span></span></li>
-                <li>Internet TLD : <span></span></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Weather</h2>
-        </section>
+      <section class="dataContainer">
+        <h2>Data</h2>
+        <ul class="informationList">
+          <li>Area: <span>2,780,400 km²</span></li>
+          <li>Population: <span>45,808,747 </span></li>
+          <li>Capital: <span>Buenos Aires</span></li>
+          <li>Languages: <span>Spanish</span></li>
+          <li>Currency: <span>Argentine Peso (ARS)</span></li>
+          <li>Time Zone: <span>UTC-3 (ART)</span></li>
+          <li>Calling Code: <span>+54</span></li>
+          <li>Internet TLD: <span>.ar</span></li>
+        </ul>
+      </section>
+      <section class="weatherContainer">
+        <h2>Weather</h2>
+        <img
+          src="images/cloudy.svg"
+          alt="Descripción de la imagen SVG"
+          width="40"
+          height="40"
+        />
+        <ul class="weatherList">
+          <li>Temperature: <span id="temperature"></span></li>
+          <li>Conditions: <span id="conditions"></span></li>
+          <li>Wind: <span id="wind"></span></li>
+          <li>WindChill: <span id="windchill"></span></li>
+        </ul>
+      </section>
     </main>
     <footer>
-        <p>
-          © <span id="currentyear"> </span> - Fabian Pappa - Mar del Plata,
-          Argentina
-        </p>
-        <p>Last modification : <span id="lastModified"></span></p>
-      </footer>
-</body>
+      <p>
+        © <span id="currentyear"> </span> - Fabian Pappa - Mar del Plata,
+        Argentina
+      </p>
+      <p>Last modification : <span id="lastModified"></span></p>
+    </footer>
+  </body>
 </html>
