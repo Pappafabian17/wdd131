@@ -1,8 +1,9 @@
 :root {
-  --principal-color: #0288d1;
+  --principal-color: #025a89;
   --secondary-color: #b3e5fc;
   --text-color: #212121;
-  --secondary-text-color: #757575;
+  --secondary-text-color: #434242;
+  --white-color:#ffffff;
 }
 * {
   box-sizing: border-box;
@@ -23,6 +24,7 @@ header {
 .responsive-image {
   width: 100vw;
   height: auto;
+  border-bottom:0.5rem solid var(--secondary-color)
 }
 .dataContainer {
   color: var(--text-color);
@@ -37,12 +39,38 @@ header {
 .informationList {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 .informationList li {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 .informationList li span {
+  font-weight:100;
+  color: var(--secondary-text-color);
+}
+.weatherContainer{
+  max-width: 300px;
+  margin: 2rem auto;
+
+}
+.weatherContainer h2{
+  text-align: center;
+}
+.weatherContainer h2::after {
+  content: url('../images/cloudy.svg'); 
+  display: block;
+  margin: 0 auto;
+  width: 50px; 
+  height: auto;
+  margin-top: 10px; 
+}
+.weatherList{
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.weatherList li span{
   font-weight: normal;
   color: var(--secondary-text-color);
 }
@@ -51,6 +79,50 @@ footer {
   grid-area: footer;
   text-align: center;
   height: 10vh;
-  background-color: rgb(79, 78, 78);
-  color: #fff;
+  background-color: var(--principal-color);
+  color: var(--white-color);
+}
+
+
+@media screen and (min-width: 769px){
+  .divider{
+    display: none;
+  }
+  .dataContainer ,.weatherContainer{
+    position: absolute; 
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
+    margin: 0; 
+    background-color: var(--white-color);;
+    border-radius: 1rem;
+  }
+  .dataContainer{
+    top: 35%; 
+    left: 17%; 
+  }
+
+  .weatherContainer{
+    top:56%;
+    left: 85%;
+  }
+  .dataContainer ul, .weatherContainer ul{
+    padding: 10px;
+  }
+  .dataContainer h2, .weatherContainer h2{
+    background-color: var(--principal-color);
+    color: var(--white-color);
+    border-radius: 1rem 1rem 5px 5px;
+  }
+
+  .responsive-image {
+    position: relative; 
+    z-index: 1; 
+  }
+}
+
+@media screen and (min-width: 1000px ) {
+  .weatherContainer{
+    top:73%;
+    left: 85%;
+  }
 }
