@@ -57,14 +57,7 @@ header {
 .weatherContainer h2{
   text-align: center;
 }
-.weatherContainer h2::after {
-  content: url('../images/cloudy.svg'); 
-  display: block;
-  margin: 0 auto;
-  width: 50px; 
-  height: auto;
-  margin-top: 10px; 
-}
+
 .weatherList{
   list-style: none;
   padding: 0;
@@ -124,5 +117,16 @@ footer {
   .weatherContainer{
     top:73%;
     left: 85%;
+  }
+  .weatherIcon{
+    display: none;
+  }
+  .weatherContainer h2::after {
+    content: "⛅"; 
+    display: block;
+    margin: 0 auto;
+    width: 50px; 
+    height: auto;
+    margin-top: 10px; 
   }
 }
