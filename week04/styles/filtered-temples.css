@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blueviolet;
+}
+nav {
+  margin: 1rem auto;
+}
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background-color: blueviolet;
+  position: absolute;
+  top: 1rem;
+  padding: 0.3rem;
+  right: 1rem;
+}
+
+#menu::before {
+  content: "☰";
+}
+#menu.open::before {
+  content: "X";
+}
+nav {
+  background-color: blueviolet;
+  width: 100vw;
+}
+
+nav ul {
+  display: none;
+}
+nav ul li {
+  list-style: none;
+  margin: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+.open ul {
+  display: block;
+}
+body {
+  font-family: "Itim", sans-serif;
+}
+h1,
+h2 {
+  margin: 1rem;
+}
+main h2 {
+  text-align: center;
+}
+
+.templesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  margin: 0 auto; 
+  max-width: 1200px; 
+}
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-image {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  height: 10vh;
+  background-color: rgb(79, 78, 78);
+  color: #fff;
+}

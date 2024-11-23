@@ -1,0 +1,16 @@
+@media screen and (min-width: 796px) {
+  header {
+    flex-direction: row;
+  }
+  #menu {
+    display: none;
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    display: flex;
+  }
+  .templesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
