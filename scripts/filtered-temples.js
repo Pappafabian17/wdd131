@@ -88,22 +88,26 @@ hamButton.addEventListener("click", () => {
   hamButton.classList.toggle("open");
 });
 
-function imageTemplate(image){
-  return `
-  <div class="card">
-  <h2>${image.templeName}</h2>
-  <p>Location : ${image.location}</p>
-  <p>Dedicated : ${image.dedicated}</p>
-  <p>Size : ${image.area} sq ft</p>
-  <img class="card-image" src="${image.imageUrl}" alt="${image.templeName}" loading="lazy"/>
-  </div>
-  `
 
-}
-function displayImages(filteredTemples){
+function displayImages(filteredTemples) {
   const templesGrid = document.querySelector(".templesGrid");
-  const card = filteredTemples.map(imageTemplate);
-  templesGrid.innerHTML = card.join("")
+  templesGrid.textContent = ""; // Limpia el contenido previo
+  const fragment = document.createDocumentFragment();
+
+  filteredTemples.forEach((temple) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <h2>${temple.templeName}</h2>
+      <p>Location: ${temple.location}</p>
+      <p>Dedicated: ${temple.dedicated}</p>
+      <p>Size: ${temple.area} sq ft</p>
+      <img class="card-image" src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy"/>
+    `;
+    fragment.appendChild(card);
+  });
+
+  templesGrid.appendChild(fragment);
 }
 
 const homeLink = document.querySelector("#home");
