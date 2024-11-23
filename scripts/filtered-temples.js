@@ -91,7 +91,7 @@ hamButton.addEventListener("click", () => {
 
 function displayImages(filteredTemples) {
   const templesGrid = document.querySelector(".templesGrid");
-  templesGrid.textContent = ""; // Limpia el contenido previo
+  templesGrid.textContent = "";
   const fragment = document.createDocumentFragment();
 
   filteredTemples.forEach((temple) => {
